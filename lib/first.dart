@@ -6,7 +6,7 @@ void main() => runApp(
           appBar: AppBar(
             title: Center(
               child:Text
-                    ("Hi!! I'm Dooraemi.."),
+                    ("Hi!! I'm Dooraemi..."),
           ),
         ),
       ),
