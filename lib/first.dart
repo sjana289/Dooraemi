@@ -4,8 +4,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lightBlue,
-        appBar: AppBar(
+       appBar: AppBar(
           title: Text("Dooraemi!!"),
           backgroundColor: Colors.green,
         ),
