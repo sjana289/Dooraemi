@@ -19,9 +19,9 @@ class _RecentState extends State<Recent> {
       Uri.encodeFull(url)
     );
 
-    List ConvertDataToJson = jsonDecode(request.body)['results'];
+    List convertDataToJson = jsonDecode(request.body)['results'];
     setState(() {
-      data = ConvertDataToJson;
+      data = convertDataToJson;
     });
   }
 
