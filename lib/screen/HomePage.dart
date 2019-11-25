@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './HomePageTopPart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -7,12 +8,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  int _selectedPage=0;
-  final _pageOptions = [
-    Text('Home'),
-    Text('Call'),
-    Text('History')
-  ];
+  int selectedPage=2;  
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           )
         ],
+        backgroundColor: Color(0xFF30336b),
       ),
       drawer: Drawer(
         child: ListView(
@@ -62,16 +59,16 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Container(
-        child: Center(
-          child: _pageOptions[_selectedPage]
-        ),
+      body: Column(
+        children: <Widget>[
+          HomePageTopPart()
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedPage,
+        currentIndex: selectedPage,
         onTap: (int index){
           setState(() {
-            _selectedPage: index;
+            selectedPage: index;
           });
         },
         items: [
