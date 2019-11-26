@@ -77,12 +77,15 @@ class _RecentState extends State<Recent> {
                               ),
                             ),
                           ),
-                          ListTile(
-                            leading: Icon(Icons.calendar_today),
-                            title: Text(
-                              data[i]['dob']['date']
-                            ),
-                          ),
+                          // ListTile(
+                          //   leading: Icon(Icons.calendar_today),
+                          //   title: Text(
+                          //     data[i]['dob']['date']
+                          //   ),
+                          // ),
+                          RaisedButton(
+                            child: Text('Reply'),
+                          )
                         ],
                       ),
                     )
