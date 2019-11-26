@@ -61,9 +61,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: <Widget>[
-          Container(
-            child: Text('Hello World', style: TextStyle(fontSize: 30.0),),
-          ),
           HomePageTopPart()
         ],
       ),

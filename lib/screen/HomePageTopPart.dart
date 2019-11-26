@@ -23,7 +23,30 @@ class _HomePageTopPartState extends State<HomePageTopPart> {
                 colors: [firstColor, secondColor, thirdColor]
               )
             ),
-          )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 70.0,width: 100.0,),
+                    Text('Your Smart', style: TextStyle(
+                      color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40.0
+                      ),
+                    ),
+                  ],
+                ),
+                
+                Text('Doorbell', style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50.0
+                  ),
+                ),
+              ],
+            ),
+          ),
         )
       ],
     );
