@@ -83,16 +83,6 @@ class _RecentState extends State<Recent> {
                           //     data[i]['dob']['date']
                           //   ),
                           // ),
-                          RaisedButton(
-                            child: Text('Tap to Reply'),
-                            onPressed: (){},
-                            color: Colors.blue,
-                            
-                            padding: const EdgeInsets.all(10.0),
-                              // new Text('$_reader',softWrap: true, style: new TextStyle(fontSize: 30.0,color: Colors.black),),
-
-                            
-                          )
                         ],
                       ),
                     )
