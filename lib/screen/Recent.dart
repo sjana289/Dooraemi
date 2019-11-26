@@ -83,6 +83,7 @@ class _RecentState extends State<Recent> {
                           //     data[i]['dob']['date']
                           //   ),
                           // ),
+<<<<<<< HEAD
                           RaisedButton(
                             child: Text('Tap to Reply'),
                             onPressed: (){},
@@ -96,6 +97,8 @@ class _RecentState extends State<Recent> {
                             
 >>>>>>> 3f596da1772230af21bb827c6cc4a0598d1d0c82
                           )
+=======
+>>>>>>> c628ff59739724b4d24ff47fda1863f9c538fc22
                         ],
                       ),
                     )
