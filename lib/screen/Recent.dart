@@ -10,7 +10,7 @@ class Recent extends StatefulWidget {
 
 class _RecentState extends State<Recent> {
 
-  final String url = "https://randomuser.me/api/?results=3";
+  final String url = "https://randomuser.me/api/?results=5";
   List data;
   bool isLoading=false;
 
@@ -84,7 +84,12 @@ class _RecentState extends State<Recent> {
                           //   ),
                           // ),
                           RaisedButton(
-                            child: Text('Reply'),
+                            child: Text('Tap to Reply'),
+                            onPressed: (){},
+                            color: Colors.blue,
+                            
+                            padding: const EdgeInsets.all(10.0),
+                              // new Text('$_reader',softWrap: true, style: new TextStyle(fontSize: 30.0,color: Colors.black),),
                           )
                         ],
                       ),
