@@ -90,6 +90,11 @@ class _RecentState extends State<Recent> {
                             
                             padding: const EdgeInsets.all(10.0),
                               // new Text('$_reader',softWrap: true, style: new TextStyle(fontSize: 30.0,color: Colors.black),),
+<<<<<<< HEAD
+=======
+
+                            
+>>>>>>> 3f596da1772230af21bb827c6cc4a0598d1d0c82
                           )
                         ],
                       ),
