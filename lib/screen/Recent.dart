@@ -10,7 +10,7 @@ class Recent extends StatefulWidget {
 
 class _RecentState extends State<Recent> {
 
-  final String url = "https://randomuser.me/api/?results=5";
+  final String url = "https://randomuser.me/api/?results=4";
   List data;
   bool isLoading=false;
 
@@ -43,6 +43,7 @@ class _RecentState extends State<Recent> {
             color: Colors.white,
           )
         ],
+        backgroundColor: Color(0xFF30336b),
       ),
       body: Container(
         child: Center(
@@ -65,14 +66,15 @@ class _RecentState extends State<Recent> {
                     Expanded(
                       child: Column(                        
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[                          
+                        children: <Widget>[      
+                                              
                           ListTile(
                             leading: Icon(Icons.person),
                             title: Text(
                               data[i]['location']['city'] + ", " + data[i]['location']['street']['name'],
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 19.0,
+                                fontSize: 16.0,
                                 fontFamily: 'Amatic',
                               ),
                             ),
@@ -83,13 +85,17 @@ class _RecentState extends State<Recent> {
                           //     data[i]['dob']['date']
                           //   ),
                           // ),
-                          RaisedButton(
-                            child: Text('Tap to Reply'),
-                            onPressed: (){},
-                            color: Colors.blue,
-                            
-                            padding: const EdgeInsets.all(10.0),
-                              // new Text('$_reader',softWrap: true, style: new TextStyle(fontSize: 30.0,color: Colors.black),),
+                          Row(
+                            children: <Widget>[
+                              SizedBox(width: 60.0,),
+                              RaisedButton(
+                                child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
+                                onPressed: (){},
+                                color: Color(0xFF5758BB),
+                                padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                                  // new Text('$_reader',softWrap: true, style: new TextStyle(fontSize: 30.0,color: Colors.black),),
+                              ),
+                            ],  
                           ),
                         ],
                       ),
