@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  int selectedPage=2;  
+  int selectedPage=0;  
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               accountEmail: Text('stupidnarcos@vietnam.in', style: TextStyle(color: Colors.black)),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage('https://i.ytimg.com/vi/Dg-9PtlKzXg/maxresdefault.jpg'),
+                  image: NetworkImage('https://previews.123rf.com/images/liveincosmos/liveincosmos1803/liveincosmos180300038/98521288-abstract-pastel-watercolor-background-.jpg'),
                   fit: BoxFit.cover
                 )
               ),
