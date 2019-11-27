@@ -37,13 +37,21 @@ class _HomePageTopPartState extends State<HomePageTopPart> {
                     ),
                   ],
                 ),
-                
-                Text('Doorbell', style: TextStyle(
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  width: 220.0,
+                  height: 80.0,
+                  decoration: BoxDecoration(
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50.0
+                    borderRadius: BorderRadius.circular(10.0)
                   ),
-                ),
+                  child: Text('Doorbell', style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 50.0
+                    ), textAlign: TextAlign.center,
+                  ),
+                )
               ],
             ),
           ),
