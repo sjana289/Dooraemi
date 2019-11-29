@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './HomePageTopPart.dart';
+import './HomePageBottomPart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -61,7 +62,8 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: <Widget>[
-          HomePageTopPart()
+          HomePageTopPart(),
+          HomePageBottomPart()
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
