@@ -21,7 +21,7 @@ class _RadialProgressState extends State<RadialProgress> with SingleTickerProvid
     super.initState();
     _radialProgressAnimationController = AnimationController(
       vsync: this, 
-      duration: Duration(seconds: 2)
+      duration: Duration(seconds: 3)
     );
     _progressAnimation = Tween(begin: 0.0, end: 360.0)
       .animate(_radialProgressAnimationController)

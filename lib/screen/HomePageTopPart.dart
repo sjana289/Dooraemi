@@ -17,7 +17,7 @@ class _HomePageTopPartState extends State<HomePageTopPart> {
     return Stack(
       children: <Widget>[
         ClipPath(clipper: CustomShapeClipper(), 
-          child: Container(height: 400.0, 
+          child: Container(height: 350.0, 
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [firstColor, secondColor, thirdColor]

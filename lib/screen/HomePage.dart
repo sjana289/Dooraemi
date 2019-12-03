@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './HomePageTopPart.dart';
 import './HomePageBottomPart.dart';
+import '../Models/Knocks.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  final ScrollController _mycontroller = new ScrollController();
   int selectedPage=0;  
 
   @override
@@ -60,11 +62,21 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          HomePageTopPart(),
-          HomePageBottomPart()
-        ],
+      body: Container(  
+        height: 600,              
+        child: Stack(children: <Widget>[
+          SingleChildScrollView(
+            controller: _mycontroller,
+            child: Column(
+              children: <Widget>[
+                HomePageTopPart(),
+                HomePageBottomPart(),
+                Knocks(),
+              ],
+            ),
+          )
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
