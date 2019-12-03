@@ -6,8 +6,17 @@ class Knocks extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          SizedBox(height: 60,),
-          Text('7 knocks today'),
+          Container(
+            padding: EdgeInsets.fromLTRB(80.0, 15.0, 80.0, 15.0),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.black,
+                width: 2.0
+              ),
+              borderRadius: BorderRadius.circular(15.0)
+            ),
+            child: Text('7 knocks today', style: TextStyle(fontSize: 19.0),)
+          ),
         ],
       ),
     );

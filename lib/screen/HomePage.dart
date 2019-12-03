@@ -70,7 +70,9 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: <Widget>[
                 HomePageTopPart(),
+                SizedBox(height: 20),
                 HomePageBottomPart(),
+                SizedBox(height: 80),
                 Knocks(),
               ],
             ),
