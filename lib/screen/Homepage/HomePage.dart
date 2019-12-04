@@ -77,7 +77,10 @@ class _HomePageState extends State<HomePage> {
                 Knocks(),
                 SizedBox(height: 30),
                 Text('Latest Activity', style: TextStyle(
-                  fontSize: 15.0,
+                  fontFamily: 'Cabin',
+                  height: 4.0,
+                  letterSpacing: 5.0,
+                  fontSize: 17.0,
                   fontWeight: FontWeight.bold
                 ),),
                 SizedBox(height: 20),

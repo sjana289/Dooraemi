@@ -43,7 +43,7 @@ class _DashboardListState extends State<DashboardList> {
           itemBuilder: (context,i){
             return Card(
               elevation: 20.0,
-              color: Color(0xFFEAF0F1),
+              color: Color(0xFFeef5fa),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)
               ),
@@ -73,15 +73,28 @@ class _DashboardListState extends State<DashboardList> {
                         ),
                         Row(
                           children: <Widget>[
-                            SizedBox(width: 20.0,),
+                            SizedBox(width: 10.0,),
                             RaisedButton(
-                              child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
+                              child: Icon(Icons.mic),
                               onPressed: (){},
-                              color: Color(0xFF5758BB),
+                              color: Color(0xFFaef879),
+                              padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                            ),
+                            RaisedButton(
+                              child: Icon(Icons.message),
+                              onPressed: (){},
+                              color: Color(0xFF8acaf6),
+                              padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                            ),
+                            RaisedButton(
+                              child: Icon(Icons.voicemail),
+                              onPressed: (){},
+                              color: Color(0xFFfbd0f2),
                               padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
                             ),
                           ],  
                         ),
+                        SizedBox(height: 5.0,)
                       ],
                     ),
                   )
