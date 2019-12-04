@@ -3,6 +3,7 @@ import './HomePageTopPart.dart';
 import './HomePageBottomPart.dart';
 import '../../Models/Knocks.dart';
 import '../../Models/DashboardList.dart';
+import '../../Models/Dnd.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -84,7 +85,9 @@ class _HomePageState extends State<HomePage> {
                   fontWeight: FontWeight.bold
                 ),),
                 SizedBox(height: 20),
-                DashboardList()
+                DashboardList(),
+                SizedBox(height: 50),
+                Dnd()
               ],
             ),
           )
