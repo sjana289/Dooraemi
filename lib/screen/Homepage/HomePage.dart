@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import './HomePageTopPart.dart';
 import './HomePageBottomPart.dart';
-import '../Models/Knocks.dart';
+import '../../Models/Knocks.dart';
+import '../../Models/DashboardList.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -74,6 +75,13 @@ class _HomePageState extends State<HomePage> {
                 HomePageBottomPart(),
                 SizedBox(height: 80),
                 Knocks(),
+                SizedBox(height: 30),
+                Text('Latest Activity', style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.bold
+                ),),
+                SizedBox(height: 20),
+                DashboardList()
               ],
             ),
           )

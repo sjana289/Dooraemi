@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Models/RadialProgress.dart';
+import '../../Models/RadialProgress.dart';
 
 class HomePageBottomPart extends StatelessWidget {
   @override

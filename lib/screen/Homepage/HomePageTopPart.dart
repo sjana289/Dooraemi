@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Clipper/CustomShapeClipper.dart';
+import '../../Clipper/CustomShapeClipper.dart';
 
 class HomePageTopPart extends StatefulWidget {
   @override
