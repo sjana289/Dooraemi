@@ -43,7 +43,7 @@ class _DashboardListState extends State<DashboardList> {
           itemBuilder: (context,i){
             return Card(
               elevation: 20.0,
-              color: Color(0xFFeef5fa),
+              color: Color(0xFFe2eff9),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)
               ),
