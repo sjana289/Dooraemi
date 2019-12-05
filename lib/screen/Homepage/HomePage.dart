@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         currentIndex: selectedPage,
         onTap: (int index){
           setState(() {
-            selectedPage: index;
+            selectedPage = index;
           });
         },
         items: [
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.call),
-            title: Text('Call')
+            title: Text('Recent'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
