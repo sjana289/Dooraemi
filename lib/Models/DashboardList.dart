@@ -10,6 +10,9 @@ class DashboardList extends StatefulWidget {
 
 class _DashboardListState extends State<DashboardList> {
   
+  DateTime _date = new DateTime.now();
+  TimeOfDay _time = new TimeOfDay.now();
+
   final String url = "https://randomuser.me/api/?results=1";
   List data;
   bool isLoading = false;
@@ -63,7 +66,7 @@ class _DashboardListState extends State<DashboardList> {
                       children: <Widget>[                          
                         ListTile(
                           title: Text(
-                            data[i]['location']['city'] + ", " + data[i]['location']['street']['name'],
+                            _date.toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 17.0,
