@@ -35,6 +35,7 @@ class _RecentState extends State<Recent> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Recent',style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
         actions: <Widget>[
           IconButton(
             onPressed: (){},

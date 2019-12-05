@@ -14,12 +14,26 @@ class _HomePageState extends State<HomePage> {
 
   final ScrollController _mycontroller = new ScrollController();
   int selectedPage=0;  
+  var dndToggleValue;
+
+  @override
+  void initState(){
+    super.initState();
+    dndToggleValue = false;
+  }
+
+  dndToggle(bool e){
+    setState(() {
+      dndToggleValue = e;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Doorami',style: TextStyle(color: Colors.white)),
+        iconTheme: IconThemeData(color: Colors.white),
         actions: <Widget>[
           IconButton(
             onPressed: (){},
@@ -31,6 +45,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color(0xFF30336b),
       ),
       drawer: Drawer(
+        elevation: 3.0,
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
@@ -58,7 +73,13 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               title: Text('Do Not Disturb'),
-              trailing: Icon(Icons.do_not_disturb),
+              trailing: Switch(
+                value: dndToggleValue,
+                onChanged: this.dndToggle,
+                inactiveTrackColor: Colors.grey,
+                inactiveThumbColor: Colors.lightBlueAccent,
+                activeColor: Colors.green,
+              ),
               onTap: (){},
             ),
           ],
@@ -96,6 +117,8 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedPage,
+        unselectedItemColor: Color(0xFF718093),
+        selectedItemColor: Color(0xFFfa983a),
         onTap: (int index){
           setState(() {
             selectedPage = index;
