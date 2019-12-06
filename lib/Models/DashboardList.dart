@@ -11,7 +11,7 @@ class DashboardList extends StatefulWidget {
 class _DashboardListState extends State<DashboardList> {
   
   DateTime _date = new DateTime.now();
-  TimeOfDay _time = new TimeOfDay.now();
+  //TimeOfDay _time = new TimeOfDay.now();
 
   final String url = "https://randomuser.me/api/?results=1";
   List data;

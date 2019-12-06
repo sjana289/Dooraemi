@@ -13,6 +13,8 @@ class _RecentState extends State<Recent> {
   final String url = "https://randomuser.me/api/?results=4";
   List data;
   bool isLoading=false;
+  Color notRead = Color(0xFFaef879);
+  Color read = Color(0xFFbdc3c7);
 
   Future getData() async {
     var request = await http.get(
@@ -46,64 +48,68 @@ class _RecentState extends State<Recent> {
         ],
         backgroundColor: Color(0xFF30336b),
       ),
-      body: Container(
-        child: Center(
-          child: isLoading
-          ? CircularProgressIndicator()
-          : ListView.builder(
-            itemCount: data == null ? 0 : data.length,
-            itemBuilder: (context,i){
-              return Card(
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.all(10.0),
-                      child: Image(
-                        image: NetworkImage(data[i]['picture']['thumbnail']),
-                        width: 80.0,
-                        fit: BoxFit.contain,
-                      ),
+      body: Stack(
+        children: <Widget>[
+          Container(
+            child: Center(
+              child: isLoading
+              ? CircularProgressIndicator()
+              : ListView.builder(
+                itemCount: data == null ? 0 : data.length,
+                itemBuilder: (context,i){
+                  return Card(
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.all(10.0),
+                          child: Image(
+                            image: NetworkImage(data[i]['picture']['thumbnail']),
+                            width: 80.0,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(                        
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[                          
+                              ListTile(
+                                title: Text(
+                                  data[i]['location']['city'] + ", " + data[i]['location']['street']['name'],
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17.0,
+                                    fontFamily: 'Amatic',
+                                  ),
+                                ),
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  SizedBox(width: 20.0,),
+                                  RaisedButton(
+                                    child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
+                                    onPressed: (){},
+                                    color: Color(0xFF5758BB),
+                                    padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                                  ),
+                                ],  
+                              ),
+                              SizedBox(height: 5.0,),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          color: Color(0xFFaef879),
+                          width: 10.0,
+                          height: 80.0,
+                        ),
+                      ],
                     ),
-                    Expanded(
-                      child: Column(                        
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[                          
-                          ListTile(
-                            title: Text(
-                              data[i]['location']['city'] + ", " + data[i]['location']['street']['name'],
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17.0,
-                                fontFamily: 'Amatic',
-                              ),
-                            ),
-                          ),
-                          // ListTile(
-                          //   leading: Icon(Icons.calendar_today),
-                          //   title: Text(
-                          //     data[i]['dob']['date']
-                          //   ),
-                          // ),
-                          Row(
-                            children: <Widget>[
-                              SizedBox(width: 20.0,),
-                              RaisedButton(
-                                child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
-                                onPressed: (){},
-                                color: Color(0xFF5758BB),
-                                padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
-                              ),
-                            ],  
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              );
-            },
+                  );
+                },
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
