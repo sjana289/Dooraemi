@@ -10,7 +10,8 @@ class Recent extends StatefulWidget {
 
 class _RecentState extends State<Recent> {
 
-  final String url = "https://randomuser.me/api/?results=4";
+  static int recentNumbers = 4;
+  final String url = "https://randomuser.me/api/?results=$recentNumbers";
   List data;
   bool isLoading=false;
 
