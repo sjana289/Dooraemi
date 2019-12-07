@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../screen/Profile.dart';
 
 class Recent extends StatefulWidget {
   @override
@@ -87,6 +88,9 @@ class _RecentState extends State<Recent> {
                                   RaisedButton(
                                     child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
                                     onPressed: (){
+                                      Navigator.push(context, MaterialPageRoute(
+                                        builder: (context) => Profile(value: data[i]['location']['city'] + ", " + data[i]['location']['street']['name'])
+                                      ));
                                     },
                                     color: Color(0xFF5758BB),
                                     padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
