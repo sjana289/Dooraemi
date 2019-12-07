@@ -17,7 +17,7 @@ This application allows the owner of a house to always stay alert. Every time so
      width="200"/> <img src="images/SS2.png"
      alt="Home Screen"
      style="float: left; margin-right: 10px;"
-     width="200"/> <img src="SS3.png"
+     width="200"/> <img src="images/SS3.png"
      alt="Recent Screen"
      style="float: left; margin-right: 10px;"
      width="200"/> 
