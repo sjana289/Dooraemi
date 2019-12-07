@@ -23,6 +23,14 @@ class _DndState extends State<Dnd> {
     setState(() {
       dndToggleValue = e;
     });
+    if(dndToggleValue == true){
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Dnd is turned on'),
+          duration: Duration(seconds: 2),
+        )
+      );
+    }
   }
 
   @override

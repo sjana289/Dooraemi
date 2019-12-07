@@ -4,6 +4,7 @@ import './HomePageBottomPart.dart';
 import '../../Models/Knocks.dart';
 import '../../Models/DashboardList.dart';
 import '../../Models/Dnd.dart';
+import './BottomDesign.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -80,7 +81,6 @@ class _HomePageState extends State<HomePage> {
                 inactiveThumbColor: Colors.lightBlueAccent,
                 activeColor: Colors.green,
               ),
-              onTap: (){},
             ),
           ],
         ),
@@ -108,7 +108,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 20),
                 DashboardList(),
                 SizedBox(height: 50),
-                Dnd()
+                Dnd(),
+                BottomDesign()
               ],
             ),
           )

@@ -13,8 +13,10 @@ class _RecentState extends State<Recent> {
   final String url = "https://randomuser.me/api/?results=4";
   List data;
   bool isLoading=false;
+
   Color notRead = Color(0xFFaef879);
   Color read = Color(0xFFbdc3c7);
+  Color notificationColor;
 
   Future getData() async {
     var request = await http.get(
@@ -31,6 +33,15 @@ class _RecentState extends State<Recent> {
   void initState(){
     super.initState();
     this.getData();
+    //notificationColor = notRead;
+  }
+
+  Color initColor(){
+    return notRead;
+  }
+
+  Color setColor(){
+    return read;
   }
 
   Widget build(BuildContext context) {
@@ -87,7 +98,9 @@ class _RecentState extends State<Recent> {
                                   SizedBox(width: 20.0,),
                                   RaisedButton(
                                     child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
-                                    onPressed: (){},
+                                    onPressed: (){
+                                      this.setColor();
+                                    },
                                     color: Color(0xFF5758BB),
                                     padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
                                   ),
@@ -98,7 +111,7 @@ class _RecentState extends State<Recent> {
                           ),
                         ),
                         Container(
-                          color: Color(0xFFaef879),
+                          color: this.initColor(),
                           width: 10.0,
                           height: 80.0,
                         ),
