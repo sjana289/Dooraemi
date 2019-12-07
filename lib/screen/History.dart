@@ -46,7 +46,7 @@ class _HistoryState extends State<History> {
             color: Colors.black,
           )
         ],
-        backgroundColor: Color.fromRGBO(r, g, b, opacity),
+        //backgroundColor: Color.fromRGBO(r, g, b, opacity),
       ),
       body: Stack(
         children: <Widget>[
@@ -86,7 +86,7 @@ class _HistoryState extends State<History> {
                                 children: <Widget>[
                                   SizedBox(width: 30.0,),
                                   RaisedButton(
-                                    child: Text('Tap for pending reply', style: BlurStyle(color: Colors.red, fontWeight: FontWeight.values,),),
+                                    child: Text('Tap for pending reply', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold,),),
                                     onPressed: (){},
                                     color: Color(0xFF5758BB),
                                     padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
@@ -98,7 +98,7 @@ class _HistoryState extends State<History> {
                           ),
                         ),
                         Container(
-                          color:ColorProperty(#ff0000),
+                          color: Color(0xFFff0000),
                           width: 20.0,
                           height: 90.0,
                         ),
