@@ -14,19 +14,16 @@ This application allows the owner of a house to always stay alert. Every time so
 <img src="images/Capture1.PNG"
      alt="Home Screen"
      style="float: left; margin-right: 10px;"
-     width="200"/> <img src="images/Capture2.PNG"
+     width="200"/> <img src="images/SS1.jpg"
      alt="Home Screen"
      style="float: left; margin-right: 10px;"
-     width="200"/> <img src="images/Capture3.PNG"
+     width="200"/> <img src="images/SS2.jpg"
      alt="Home Screen"
      style="float: left; margin-right: 10px;"
-     width="200"/> <img src="https://media.giphy.com/media/2eKf5GwmUd2SBFHkMz/200w_d.gif"
-     alt="Home Screen"
+     width="200"/> <img src="SS3.jpg"
+     alt="Recent Screen"
      style="float: left; margin-right: 10px;"
-     width="200"/> <img src="https://media.giphy.com/media/fQAxC8cuFEbA0f5tql/200w_d.gif"
-     alt="Home Screen"
-     style="float: left; margin-right: 10px;"
-     width="200"/>
+     width="200"/> 
      
 ## NOTE:
 This project is subject to change by the developer and is still in development
@@ -51,9 +48,12 @@ Pull Requests are welcome. Please follow these rules for the ease of understandi
 #### Feel free to contribute
 
 ## Developed & Maintained by
-[Sayan Mondal](https://github.com/S-ayanide) 
-[📷 Insta](https://www.instagram.com/s_ayanide/)
-[🐤 Twitter](https://www.instagram.com/s_ayanide/) [![Twitter](https://img.shields.io/twitter/url/https/github.com/S-ayanide/Flutter-ScratchAndWin/edit/master/README.md.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FS-ayanide%2FFlutter-ScratchAndWin%2Fedit%2Fmaster%2FREADME.md)
+[Srijan Jana](https://github.com/sjana289) 👨‍💻
+[Mainak Das](https://github.com/mainak679) 👨‍💻
+[Srishti Pramanick](https://github.com/SrishtiPramanick) 👩‍💻
+[Abhilash Nair](https://github.com/Abhilashnair261) 👨‍💻
+[Nisha Sen](https://github.com/nishasen) 👩‍💻
+[Sayan Mondal](https://github.com/S-ayanide) 👨‍💻
 
 ## License 
 [![GitHub license](https://img.shields.io/github/license/S-ayanide/Flutter-ScratchAndWin.svg?style=for-the-badge)](https://github.com/S-ayanide/Flutter-ScratchAndWin/blob/master/LICENSE)
