@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import './DateTimeFetcher.dart';
+import '../screen/Profile.dart';
 
 class DashboardList extends StatefulWidget {
   @override
@@ -60,70 +61,77 @@ class _DashboardListState extends State<DashboardList> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)
               ),
-              child: Row(
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(10.0),
-                    child: Image(
-                      image: NetworkImage(data[i]['picture']['thumbnail']),
-                      width: 80.0,
-                      fit: BoxFit.contain,
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => Profile(value: computeTime() + computeSeconds())
+                  ));
+                },
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.all(10.0),
+                      child: Image(
+                        image: NetworkImage(data[i]['picture']['thumbnail']),
+                        width: 80.0,
+                        fit: BoxFit.contain,
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Column(                        
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[                          
-                        ListTile(
-                          title: Row(
-                            children: <Widget>[
-                              Text(
-                                computeTime(),
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 17.0,
-                                  fontFamily: 'Amatic',
+                    Expanded(
+                      child: Column(                        
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[                          
+                          ListTile(
+                            title: Row(
+                              children: <Widget>[
+                                Text(
+                                  computeTime(),
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17.0,
+                                    fontFamily: 'Amatic',
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                computeSeconds(),
-                                style: TextStyle(
-                                  color: Colors.black38,
-                                  fontSize: 14.0,
-                                  fontFamily: 'Cabin',
-                                ),
-                              ),  
-                            ],
+                                Text(
+                                  computeSeconds(),
+                                  style: TextStyle(
+                                    color: Colors.black38,
+                                    fontSize: 14.0,
+                                    fontFamily: 'Cabin',
+                                  ),
+                                ),  
+                              ],
+                            ),
                           ),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            SizedBox(width: 10.0,),
-                            RaisedButton(
-                              child: Icon(Icons.mic),
-                              onPressed: (){},
-                              color: Color(0xFFaef879),
-                              padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
-                            ),
-                            RaisedButton(
-                              child: Icon(Icons.message),
-                              onPressed: (){},
-                              color: Color(0xFF8acaf6),
-                              padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
-                            ),
-                            RaisedButton(
-                              child: Icon(Icons.voicemail),
-                              onPressed: (){},
-                              color: Color(0xFFfbd0f2),
-                              padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
-                            ),
-                          ],  
-                        ),
-                        SizedBox(height: 5.0,)
-                      ],
-                    ),
-                  )
-                ],
+                          Row(
+                            children: <Widget>[
+                              SizedBox(width: 10.0,),
+                              RaisedButton(
+                                child: Icon(Icons.mic),
+                                onPressed: (){},
+                                color: Color(0xFFaef879),
+                                padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                              ),
+                              RaisedButton(
+                                child: Icon(Icons.message),
+                                onPressed: (){},
+                                color: Color(0xFF8acaf6),
+                                padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                              ),
+                              RaisedButton(
+                                child: Icon(Icons.voicemail),
+                                onPressed: (){},
+                                color: Color(0xFFfbd0f2),
+                                padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
+                              ),
+                            ],  
+                          ),
+                          SizedBox(height: 5.0,)
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             );
           },
