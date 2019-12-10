@@ -36,7 +36,7 @@ class _HistoryState extends State<History> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('History',style: TextStyle(color: Colors.redAccent)),
+        title: Text('History',style: TextStyle(color: Colors.black)),
         iconTheme: IconThemeData(color: Colors.blueGrey),
         actions: <Widget>[
           IconButton(
@@ -86,7 +86,7 @@ class _HistoryState extends State<History> {
                                 children: <Widget>[
                                   SizedBox(width: 30.0,),
                                   RaisedButton(
-                                    child: Text('Tap for pending reply', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold,),),
+                                    child: Text('Tap for pending reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
                                     onPressed: (){},
                                     color: Color(0xFF5758BB),
                                     padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),

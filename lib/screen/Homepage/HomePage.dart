@@ -1,3 +1,4 @@
+import 'package:dooraemi/screen/History.dart';
 import 'package:flutter/material.dart';
 import './HomePageTopPart.dart';
 import './HomePageBottomPart.dart';
@@ -70,8 +71,16 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: Text('History'),
               trailing: Icon(Icons.history),
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context){
+                          return History();
+              },
             ),
+          );
+        },
+       ),
             ListTile(
               title: Text('Do Not Disturb'),
               trailing: Switch(
