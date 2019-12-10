@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'package:http/http.dart' as http;
+import './DateTimeFetcher.dart';
 
 class DashboardList extends StatefulWidget {
   @override
@@ -32,6 +33,11 @@ class _DashboardListState extends State<DashboardList> {
   void initState(){
     super.initState();
     this.getData();
+  }
+
+  computeTime(){
+    String curDate = findDate() + ' ' + findMonth() + ', ' + findYear() + '       ' + findHourTime() + ':' + findMinuteTime() + ', ' + findSecondTime() + ' secs';
+    return curDate;
   }
 
   @override
@@ -66,7 +72,7 @@ class _DashboardListState extends State<DashboardList> {
                       children: <Widget>[                          
                         ListTile(
                           title: Text(
-                            _date.toString(),
+                            computeTime(),
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 17.0,
