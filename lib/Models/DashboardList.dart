@@ -36,8 +36,12 @@ class _DashboardListState extends State<DashboardList> {
   }
 
   computeTime(){
-    String curDate = findDate() + ' ' + findMonth() + ', ' + findYear() + '       ' + findHourTime() + ':' + findMinuteTime() + ', ' + findSecondTime() + ' secs';
+    String curDate = findDate() + ' ' + findMonth() + ', ' + findYear() + '              ' + findHourTime() + ':' + findMinuteTime();
     return curDate;
+  }
+
+  computeSeconds(){
+    return ', ' + findSecondTime() + ' secs';
   }
 
   @override
@@ -71,13 +75,25 @@ class _DashboardListState extends State<DashboardList> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[                          
                         ListTile(
-                          title: Text(
-                            computeTime(),
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0,
-                              fontFamily: 'Amatic',
-                            ),
+                          title: Row(
+                            children: <Widget>[
+                              Text(
+                                computeTime(),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17.0,
+                                  fontFamily: 'Amatic',
+                                ),
+                              ),
+                              Text(
+                                computeSeconds(),
+                                style: TextStyle(
+                                  color: Colors.black38,
+                                  fontSize: 14.0,
+                                  fontFamily: 'Cabin',
+                                ),
+                              ),  
+                            ],
                           ),
                         ),
                         Row(
