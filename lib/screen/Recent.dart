@@ -61,6 +61,11 @@ class _RecentState extends State<Recent> {
       body: Stack(
         children: <Widget>[
           Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFFA1FFCE), Color(0xFFFAFFD1)]
+              )
+            ),
             child: Center(
               child: isLoading
               ? CircularProgressIndicator()
@@ -68,7 +73,10 @@ class _RecentState extends State<Recent> {
                 itemCount: data == null ? 0 : data.length,
                 itemBuilder: (context,i){
                   return Card(
+                    color: Color(0xFFf5f1e6),
+                    elevation: 3.0,
                     child: InkWell(
+                      highlightColor: Color(0xFFa5cc82),
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
                           builder: (context) => Profile(value: computeTime() + computeSeconds())
@@ -114,9 +122,9 @@ class _RecentState extends State<Recent> {
                                   children: <Widget>[
                                     SizedBox(width: 20.0,),
                                     RaisedButton(
-                                      child: Text('Tap to Reply', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,),),
+                                      child: Text('Tap to Reply', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,),),
                                       onPressed: (){},
-                                      color: Color(0xFF5758BB),
+                                      color: Color(0xFF764d991),
                                       padding: const EdgeInsets.fromLTRB(20.0,5.0,20.0,5.0),
                                     ),
                                   ],  
